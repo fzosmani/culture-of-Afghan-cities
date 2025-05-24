@@ -1,0 +1,211 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5DC;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(135deg, #855ddc, #3f32eb);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  animation: slideIn 1.5s ease-out;
+}
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+header p {
+  margin-top: 1rem;
+  animation: fadeIn 3s ease-in-out;
+  font-size: 1.2rem;
+}
+nav {
+  background-color: #4d11d0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #333;
+}
+section {
+  padding: 3rem 2rem;
+}
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.featured-cities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.city-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.4s, background-color 0.4s;
+}
+.city-card:hover {
+  transform: scale(1.05);
+  background-color: #f7ecd6;
+}
+.city-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.city-card h3 {
+  font-family: 'Noto Serif', serif;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.city-card p {
+  padding: 0 1rem 1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery .card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.gallery .card:hover {
+  background-color: #5b10ff;
+  color: white;
+}
+.gallery .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.gallery .card h4 {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.city-day {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: linear-gradient(120deg, #855ddc, #3f32eb);
+  padding: 2.5rem;
+  border-radius: 10px;
+  color:white;
+  transition: background-color 0.5s ease;
+}
+.city-day:hover {
+  background-color: #c4941d;
+}
+.city-day .info {
+  flex: 1;
+}
+.city-day h2 {
+  font-family: 'Noto Serif', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.city-day ul {
+  list-style: square;
+  padding-left: 1.2rem;
+}
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.form-section form {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+input, textarea, button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #DAA520;
+  box-shadow: 0 0 5px rgba(218,165,32,0.5);
+}
+button {
+  background-color: #a786ef;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #4d11d0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  /* بقیه استایل‌ها */
+}
+
+.quote {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(139, 69, 19, 0.8); /* قهوه‌ای نیمه‌شفاف */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover .quote {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
